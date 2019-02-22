@@ -1,4 +1,4 @@
-# gadget
+# my vue-ref-app
 
 ## Project setup
 ```
