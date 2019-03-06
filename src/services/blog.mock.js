@@ -12,7 +12,7 @@ const HTTP = axios.create({
 var mock = new MockAdapter(HTTP);
 
 let fakeData = [
-{
+  {
     userId: 1,
     id: 1,
     title:
@@ -36,9 +36,10 @@ mock.onGet("posts").reply(200, {
 });
 
 const fetchPosts = function() {
-  return HTTP.get("posts").then(response => 
-    // data - is the response that was provided by the server
-    response.data.data
+  return HTTP.get("posts").then(
+    response =>
+      // data - is the response that was provided by the server
+      response.data.data
   );
 };
 

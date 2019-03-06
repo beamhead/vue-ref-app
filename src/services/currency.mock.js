@@ -51,9 +51,7 @@ mock.onGet("currentprice.json").reply(200, {
 });
 
 const fetchBitCoin = function() {
-  return HTTP.get("currentprice.json").then(response => 
-     response.data.data.bpi
-  );
+  return HTTP.get("currentprice.json").then(response => response.data.data.bpi);
 };
 
 export default {

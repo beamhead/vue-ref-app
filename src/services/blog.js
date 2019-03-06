@@ -8,9 +8,7 @@ const HTTP = axios.create({
 });
 
 const fetchPosts = function() {
-  return HTTP.get("posts").then(response =>
-    response.data
-  );
+  return HTTP.get("posts").then(response => response.data);
 };
 
 export default {

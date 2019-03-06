@@ -7,7 +7,9 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit",
-    "test": "jest --config=./jest.config.js --coverage"
+    "test": "jest --config=./jest.config.js --coverage",
+    "test:clearcache": "jest --clearCache --config=./jest.config.js",
+    "test:showconf": "jest --showConfig --config=./jest.config.js"
   },
   "dependencies": {
     "axios": "^0.18.0",
