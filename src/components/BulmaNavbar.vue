@@ -25,6 +25,7 @@
     <div id="navbarBasicExample" class="navbar-menu">
       <div class="navbar-start">
         <router-link to="/" class="navbar-item">Hem</router-link>
+        <router-link to="/table" class="navbar-item">Table</router-link>
         <router-link to="/info" class="navbar-item">Info</router-link>
         <router-link to="/about" class="navbar-item">Om</router-link>
         <router-link to="/else" class="navbar-item">Nåt annat</router-link>
@@ -53,9 +54,7 @@
       <div class="navbar-end">
         <div class="navbar-item">
           <div class="buttons">
-            <router-link to="/" class="button is-primary"
-              ><strong>Sign up</strong></router-link
-            >
+            <router-link to="/signup" class="button is-primary"><strong>Sign up</strong></router-link>
             <router-link to="/" class="button is-light">Log in</router-link>
           </div>
         </div>

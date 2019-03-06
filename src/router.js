@@ -8,6 +8,8 @@ import Tables from "@/views/ExTables.vue";
 import Charts from "@/views/ExCharts.vue";
 import Else from "@/views/Else.vue";
 import Modal from "@/views/ModalPage.vue";
+import Table from "@/views/Table.vue";
+import Register from "@/views/Register.vue";
 
 Vue.use(Router);
 
@@ -21,6 +23,11 @@ export default new Router({
       path: "/",
       name: "home",
       component: Home
+    },
+    {
+      path: "/table",
+      name: "table",
+      component: Table
     },
     {
       path: "/else",
@@ -56,6 +63,11 @@ export default new Router({
       path: "/info",
       name: "info",
       component: Info
+    },
+    {
+      path: "/signup",
+      name: "register",
+      component: Register
     },
     {
       path: "/about",

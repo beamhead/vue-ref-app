@@ -11,12 +11,12 @@ Vue.prototype.$version = VERSION;
 
 Vue.component("vue-headful", vueHeadful);
 
-new Vue({
-  router,
-  render: h => h(App)
-}).$mount("#app");
-
 Vue.use(Buefy, {
   defaultIconPack: "fas",
   defaultContainerElement: "#app"
 });
+
+new Vue({
+  router,
+  render: h => h(App)
+}).$mount("#app");
