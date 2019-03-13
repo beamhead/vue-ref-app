@@ -10,7 +10,7 @@ const HTTP = axios.create({
 
 // This sets the mock adapter on the default instance
 var mock = new MockAdapter(HTTP);
-let fakeData = {
+let mockData = {
   time: {
     updated: "Feb 19, 2019 10:17:00 UTC",
     updatedISO: "2019-02-19T10:17:00+00:00",
@@ -47,7 +47,7 @@ let fakeData = {
 // Mock any GET request to /posts
 // arguments for reply are (status, data, headers)
 mock.onGet("currentprice.json").reply(200, {
-  data: fakeData
+  data: mockData
 });
 
 const fetchBitCoin = function() {

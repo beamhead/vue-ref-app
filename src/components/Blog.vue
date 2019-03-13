@@ -23,8 +23,8 @@
 </template>
 
 <script>
-import API from "@/services/blog.js";
-//import API from "@/services/blog.mock.js";
+//import API from "@/services/blog.js";
+import API from "api-client/blog.js";
 
 export default {
   name: "Blog",

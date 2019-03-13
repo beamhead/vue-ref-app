@@ -1,5 +1,12 @@
 # vue-ref-app
 
+# install these modules CHE
+npm install buefy
+npm install axios
+npm install vue-chartjs chart.js --save
+npm i vue-headful
+npm install axios-mock-adapter --save-dev
+
 ## Project setup
 ```
 npm install
