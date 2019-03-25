@@ -9,8 +9,8 @@ const HTTP = axios.create({
   baseURL: baseURL
 });
 
-// This sets the mock adapter on the default instance
-var mock = new MockAdapter(HTTP);
+// This sets the mock adapter on the default instance (with delay)
+var mock = new MockAdapter(HTTP, { delayResponse: 2000 });
 
 // Mock any GET request to /posts
 // arguments for reply are (status, data, headers)

@@ -1,5 +1,6 @@
 <template>
 <div id="wmiDataTableID">
+
  <table class="table is-narrow is-striped">
   <thead>
     <tr>
@@ -14,6 +15,11 @@
     </tr>
   </tbody>
 </table>
+
+    <b-loading
+      :is-full-page="isFullPage"
+      :active.sync="isLoading"
+      :can-cancel="true"></b-loading>
  
 </div>
 </template>
@@ -22,7 +28,6 @@
 //https://www.developerdrive.com/2017/07/creating-a-data-table-in-vue-js/
 // api-client - is an alias
 import API from "api-client/wmiData.js";
-
 
 export default {
   name: "WmiDataTable",
@@ -39,13 +44,14 @@ export default {
       sortColumn: '',
       rows: [],
       errors: [],
-      isLoading: true,
+      isLoading: false,
       isFullPage: false 
     };
   },
   watch: {
     // Whenever the wmiclass prop changes, fetch new data
     wmi(wmi) {
+      this.isLoading = true;
       this.rows = [];
       var array = wmi.split(";")
       // Fetch data
