@@ -29,6 +29,8 @@
         <router-link to="/info" class="navbar-item">Info</router-link>
         <router-link to="/about" class="navbar-item">Om</router-link>
         <router-link to="/else" class="navbar-item">Nåt annat</router-link>
+        <router-link to="/wmi-viewer" class="navbar-item">WMI Viewer</router-link>
+        <router-link to="/wmi-battery" class="navbar-item">Client Battery</router-link>
 
         <div class="navbar-item has-dropdown is-hoverable">
           <a class="navbar-link">Exempel</a>

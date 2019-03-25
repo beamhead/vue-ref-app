@@ -10,6 +10,8 @@ import Else from "@/views/Else.vue";
 import Modal from "@/views/ModalPage.vue";
 import Table from "@/views/Table.vue";
 import Register from "@/views/Register.vue";
+import WmiViewer from "@/views/WmiViewer.vue";
+import WmiBattery from "@/views/WmiBattery.vue";
 
 Vue.use(Router);
 
@@ -23,6 +25,16 @@ export default new Router({
       path: "/",
       name: "home",
       component: Home
+    },
+    {
+      path: "/wmi-viewer",
+      name: "wmiviewer",
+      component: WmiViewer
+    },
+    {
+      path: "/wmi-battery",
+      name: "wmibattery",
+      component: WmiBattery
     },
     {
       path: "/table",

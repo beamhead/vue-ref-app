@@ -1,6 +1,6 @@
 import axios from "axios";
 import MockAdapter from "axios-mock-adapter";
-import mockData from "./wmiBatteryData";
+import mockData from "./wmiWQL.json";
 
 const baseURLDev = "http://jsonplaceholder.typicode.com/";
 const baseURL = baseURLDev;
@@ -14,12 +14,12 @@ var mock = new MockAdapter(HTTP);
 
 // Mock any GET request to /posts
 // arguments for reply are (status, data, headers)
-mock.onGet("class/wmiBattery").reply(200, {
+mock.onGet("class/wql/CIM_Battery").reply(200, {
   data: mockData
 });
 
-const fetchWMI = function() {
-  return HTTP.get("class/wmiBattery").then(
+const fetchWQL = function(wmiClass) {
+  return HTTP.get("class/wql/" +wmiClass).then(
     response =>
       // data - is the response that was provided by the server
       response.data.data
@@ -27,5 +27,6 @@ const fetchWMI = function() {
 };
 
 export default {
-  fetchWMI: fetchWMI
+  fetchWQL: fetchWQL
 };
+

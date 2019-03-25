@@ -1,14 +1,12 @@
-import API from "api-client/blog.js";
-//import API from "@/services/blog.js";
+import API from "@/services/blog.js";
 //import API from "@/services/mocks/blog.js";
+//import API from "api-client/blog.js";
 
 describe("/services/blog.js", () => {
   it("Should contain an array of objects matching the intended shape.", () => {
     return API.fetchPosts().then(data => {
       expect(Array.isArray(data)).toEqual(true);
-
-      expect(process.env.VUE_APP_API_CLIENT).toEqual("/mock");
-
+      
       data.forEach((dataPoint) => {
         // Ensure each data point is an object with an exact set of keys.
         expect(typeof dataPoint).toEqual('object');

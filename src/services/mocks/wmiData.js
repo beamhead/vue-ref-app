@@ -11,15 +11,15 @@ const HTTP = axios.create({
 
 // This sets the mock adapter on the default instance
 var mock = new MockAdapter(HTTP);
-
 // Mock any GET request to /posts
 // arguments for reply are (status, data, headers)
-mock.onGet("class/wmiBattery").reply(200, {
+mock.onGet("class/CIM_Battery/1").reply(200, {
   data: mockData
 });
 
-const fetchWMI = function() {
-  return HTTP.get("class/wmiBattery").then(
+const fetchWmiData = function(wmiClassName, wqlId) {
+  //console.log("wmiData.js: "+ wmiClassName);
+  return HTTP.get("class/"+wmiClassName + "/" +wqlId).then(
     response =>
       // data - is the response that was provided by the server
       response.data.data
@@ -27,5 +27,5 @@ const fetchWMI = function() {
 };
 
 export default {
-  fetchWMI: fetchWMI
+  fetchWmiData: fetchWmiData
 };

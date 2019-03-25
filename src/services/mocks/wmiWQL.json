@@ -1,0 +1,1 @@
+﻿{"class":"CIM_Battery","wql":[{"id":"1","query":"Select battery from computer1"},{"id":"2","query":"Select battery from computer2"}]}

@@ -10,6 +10,11 @@ module.exports = {
   moduleNameMapper: {
     "^@/(.*)$": "<rootDir>/src/$1"
   },
+  collectCoverage: false,
+  collectCoverageFrom: [
+    'src/**/*.{js,vue}',
+    '!src/main.js', // No need to cover bootstrap file
+  ],
   snapshotSerializers: ["jest-serializer-vue"],
   testMatch: [
     "**/tests/unit/**/*.spec.(js|jsx|ts|tsx)|**/__tests__/*.(js|jsx|ts|tsx)"
