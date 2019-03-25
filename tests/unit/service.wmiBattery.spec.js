@@ -1,5 +1,6 @@
-import API from "@/services/mocks/wmiBattery.js";
+//import API from "@/services/mocks/wmiBattery.js";
 //import API from "@/services/wmiBattery.js";
+import API from "api-client/wmiBattery.js";
 describe("/services/wmiBattery.js", () => {
   it('Should contain an array of objects matching the intended shape.', () => {
     return API.fetchWMI().then(data => {

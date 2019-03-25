@@ -8,7 +8,8 @@ module.exports = {
   },
   transformIgnorePatterns: ["/node_modules/"],
   moduleNameMapper: {
-    "^@/(.*)$": "<rootDir>/src/$1"
+    "^@/(.*)$": "<rootDir>/src/$1",
+    "^api-client/(.*)$": "<rootDir>/src/services/mocks/$1"
   },
   collectCoverage: false,
   collectCoverageFrom: [

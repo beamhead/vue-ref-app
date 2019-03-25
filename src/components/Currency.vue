@@ -24,8 +24,8 @@
 
 <script>
 //import API from "@/services/currency.js";
-import API from "@/services/mocks/currency.js";
-//import API from "api-client/blog.js";
+//import API from "@/services/mocks/currency.js";
+import API from "api-client/currency.js";
 
 export default {
   name: "Currency",
