@@ -17,7 +17,7 @@
             <p class="title">Middle tile</p>
             <p class="subtitle">With an image</p>
             <figure class="image is-4by3">
-              <img src="../assets/raven-xl.png" alt="Description" />
+              <img src="../assets/img/raven512.png" width="512" height="512" alt="Description" />
             </figure>
           </article>
         </div>

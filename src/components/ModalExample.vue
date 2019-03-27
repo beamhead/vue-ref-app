@@ -16,7 +16,7 @@
 
     <b-modal :active.sync="isImageModalActive">
       <p class="image is-4by3">
-        <img src="../assets/raven-xl.png" />
+        <img src="../assets/img/raven512.png" />
       </p>
     </b-modal>
 
@@ -24,14 +24,14 @@
       <div class="card">
         <div class="card-image">
           <figure class="image is-4by3">
-            <img src="../assets/raven-xl.png" alt="Image" />
+            <img src="../assets/img/raven512.png" alt="Image" />
           </figure>
         </div>
         <div class="card-content">
           <div class="media">
             <div class="media-left">
               <figure class="image is-48x48">
-                <img src="../assets/raven-large.png" alt="Image" />
+                <img src="../assets/img/raven192.png" alt="Image" />
               </figure>
             </div>
             <div class="media-content">

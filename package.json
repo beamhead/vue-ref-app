@@ -6,16 +6,17 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "test:unit": "vue-cli-service test:unit",
-    "test:cover": "jest --config=./jest.config.js --coverage",
+    "inspect:webpack": "vue inspect > output.js",
     "test:clearcache": "jest --clearCache --config=./jest.config.js",
     "test:config": "jest --showConfig --config=./jest.config.js",
-    "inspect:webpack": "vue inspect > output.js"
+    "test:cover": "jest --config=./jest.config.js --coverage",
+    "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
     "axios": "^0.18.0",
     "buefy": "^0.7.3",
     "chart.js": "^2.7.3",
+    "register-service-worker": "^1.6.2",
     "vue": "^2.6.6",
     "vue-chartjs": "^3.4.0",
     "vue-headful": "^2.0.1",
@@ -24,8 +25,9 @@
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.5.0",
     "@vue/cli-plugin-eslint": "^3.5.0",
-    "@vue/cli-plugin-unit-jest": "^3.5.0",
-    "@vue/cli-service": "^3.5.0",
+    "@vue/cli-plugin-pwa": "^3.5.1",
+    "@vue/cli-plugin-unit-jest": "^3.5.2",
+    "@vue/cli-service": "^3.5.2",
     "@vue/eslint-config-prettier": "^4.0.1",
     "@vue/test-utils": "1.0.0-beta.29",
     "axios-mock-adapter": "^1.16.0",

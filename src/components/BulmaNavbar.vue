@@ -6,7 +6,7 @@
   >
     <div class="navbar-brand">
       <a class="navbar-item" href="/">
-        <img src="../assets/raven.png" />
+        <img src="../assets/img/icons/android-chrome-192x192.png" alt="korpen spanar"/>
       </a>
 
       <a
