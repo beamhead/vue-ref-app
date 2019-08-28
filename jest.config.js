@@ -15,6 +15,8 @@ module.exports = {
   collectCoverageFrom: [
     'src/**/*.{js,vue}',
     '!src/main.js', // No need to cover bootstrap file
+    '!src/registerServiceWorker.js', // No need to cover 
+    '!src/router.js' // No need to cover 
   ],
   snapshotSerializers: ["jest-serializer-vue"],
   testMatch: [

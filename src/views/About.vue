@@ -17,6 +17,8 @@
 // @ is an alias to /src
 import HelloWorld from "@/components/HelloWorld.vue";
 
+console.log(this.$FM_API)
+
 export default {
   name: "about",
   components: {

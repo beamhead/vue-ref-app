@@ -1,5 +1,7 @@
 <template>
 <div id="wmiBatteryId">
+  <a href="#"  v-on:click="toCSV('csv')">CSV</a>
+  <a href="#"  v-on:click="toCSV('json')">json</a>
  <table class="table is-narrow is-striped">
   <thead>
     <tr>
@@ -22,6 +24,7 @@
 //https://www.developerdrive.com/2017/07/creating-a-data-table-in-vue-js/
 // api-client - is an alias
 import API from "api-client/wmiBattery.js";
+//const { Parser } = require('json2csv');
 
 export default {
   name: "WmiBattery",
@@ -67,6 +70,35 @@ methods: {
         }
         return 0;
       })
+    },toCSV(type){
+      console.log("TOCSV");
+      try {
+ 
+        console.log(type);
+        //const fields = Object.keys(this.rows[0]);
+        //const opts = { fields };
+        //const parser = new Parser(opts);
+        //const csv = parser.parse(this.rows);
+        console.log(this.rows);
+       
+        var checkedjson = JSON.parse(JSON.stringify(this.rows));
+        console.log(checkedjson);
+
+
+        let content = "data:application/json;charset=utf-8,"+ JSON.stringify(this.rows);
+
+        const link = document.createElement("a");
+        var data = encodeURI(content);
+        link.setAttribute("href",data);
+        link.setAttribute("download","export.json");
+        document.body.appendChild(link);
+        link.click();
+
+        console.log(this.rows);
+
+      } catch (err) {
+        console.error(err);
+      }
     }
   },
     computed: {

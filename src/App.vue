@@ -1,7 +1,7 @@
 <template>
   <BaseLayout v-bind:show-footer="true">
     <template v-slot:version>
-      {{ $version }}
+      {{ $version }}   {{ $FM_API }}
     </template>
   </BaseLayout>
 </template>
